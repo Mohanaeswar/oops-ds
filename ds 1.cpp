@@ -1,31 +1,34 @@
 #include<iostream>
 using namespace std;
-void Traverse(int arr[]);
-void Insert(int arr[]);
-void Delete(int arr[]);
-void Search(int arr[]);
+
+int arr[]={6,9,7,4,1,0,11,15,16};
+int len=sizeof(arr)/sizeof(arr[0]);
+
+void Traverse();
+void Insert();
+void Delete();
+void Search();
 int main()
-{
-	int arr[]={6,9,7,4,1,0,11,15,16};
-	int choice;
-	cout << "Menu:\n1. Traverse\n2. Insert\n3. Delete\n4. Search\n5. Exit";
-	cout<<"\nEnter the choice:";
-	cin>>choice;
+{	
+	int choice,index,value;
 	while(1)
 	{
+		cout << "\nMenu:\n1. Traverse\n2. Insert\n3. Delete\n4. Search\n5. Exit";
+		cout<<"\nEnter the choice:";
+		cin>>choice;
 		switch(choice)
 		{
 				case 1:
-					void Traverse(int arr[]);
+					Traverse();
 					break;
 				case 2:
-					void Insert();
+					Insert();
 					break;
 				case 3:
-					void Delete();
+					Delete();
 					break;
 				case 4:
-					void Search();
+					Search();
 					break;
 				case 5:exit(0);
 				default:
@@ -33,25 +36,44 @@ int main()
 					break;
 		}
 	}
+	return 0;
 }
-void Traverse(int arr[])
+void Traverse()
 {
-	int len=sizeof(arr);
 	cout << "Array elements: ";
         for (int i = 0; i < len; i++) 
 		{
             cout << arr[i] << " ";
 		}
 }
-void Insert(int arr[])
+void Insert()
 {
-	
+	int index,value;
+	cout<<"\nEnter the position for the new element:";
+	cin>>index;
+	cout<<"\nEnter the element to be inserted:";
+	cin>>value;
+	for(int i=len;i>=index-1;i--)
+	{
+		arr[i+1]=arr[i];	
+	}	
+	arr[index-1]=value;
+		len=len+1;
 }
-void Delete(int arr[])
+void Delete()
 {
-	
+	int index,value;
+	cout<<"\nEnter the position of the element to be deleted:";
+	cin>>index;
+	value=arr[index];
+	for(int i=index;i<len;i++)
+	{
+		arr[i]=arr[i+1];
+	}
+	len=len+1;
+	cout<<"\nThe deleted element is:"<<value;		
 }
-void Search(int arr[])
+void Search()
 {
 	int element;
 	int len=sizeof(arr);
@@ -61,7 +83,7 @@ void Search(int arr[])
 	{
 	if (arr[i]==element)
 	{
-			cout<<"Element found"<<endl<<"location:"<<i;
+		cout<<"Element found"<<endl<<"location:"<<i;
 	}
 	else
 	{
