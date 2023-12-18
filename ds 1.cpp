@@ -1,9 +1,7 @@
 #include<iostream>
 using namespace std;
-
 int arr[]={6,9,7,4,1,0,11,15,16};
 int len=sizeof(arr)/sizeof(arr[0]);
-
 void Traverse();
 void Insert();
 void Delete();
@@ -13,7 +11,7 @@ int main()
 	int choice,index,value;
 	while(1)
 	{
-		cout << "\nMenu:\n1. Traverse\n2. Insert\n3. Delete\n4. Search\n5. Exit";
+		cout << "Menu:\n1. Traverse\n2. Insert\n3. Delete\n4. Search\n5. Exit";
 		cout<<"\nEnter the choice:";
 		cin>>choice;
 		switch(choice)
@@ -35,8 +33,7 @@ int main()
 					cout << "Invalid choice.";
 					break;
 		}
-	}
-	return 0;
+	}	return 0;
 }
 void Traverse()
 {
@@ -45,6 +42,7 @@ void Traverse()
 		{
             cout << arr[i] << " ";
 		}
+		cout<<endl;
 }
 void Insert()
 {
@@ -71,23 +69,23 @@ void Delete()
 		arr[i]=arr[i+1];
 	}
 	len=len+1;
-	cout<<"\nThe deleted element is:"<<value;		
+	cout<<"\nThe deleted element is:"<<value<<endl;		
 }
 void Search()
 {
 	int element;
 	int len=sizeof(arr);
-	cout<<"enter the element to be found";
+	cout<<"\nEnter the element to be found";
 	cin>>element;
 	for (int i = 0; i < len; i++)
 	{
 	if (arr[i]==element)
 	{
-		cout<<"Element found"<<endl<<"location:"<<i;
+		cout<<"\nElement found in:"<<i;
 	}
 	else
 	{
-		cout<<"Element not found";
+		cout<<"\nElement not found";
 	}
 	}
 }
