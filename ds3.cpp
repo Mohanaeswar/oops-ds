@@ -1,6 +1,6 @@
-#include<iostream>
-using namespace std;
-
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
 #define Max 5
 
 class Stack
@@ -12,7 +12,6 @@ public:
     {
         top = -1;
     }
-
     void push();
     void pop();
     void display();
@@ -65,6 +64,7 @@ void Stack::display()
 
 int main()
 {
+    clrscr();
     cout << "Implementation of stack using array";
     Stack s;
     int choice;
@@ -90,10 +90,9 @@ int main()
             exit(0);
         default:
             cout << "Invalid Choice";
-            return 0;
         }
     }
-
     return 0;
+    getch();
 }
 
