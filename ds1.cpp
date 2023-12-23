@@ -1,5 +1,6 @@
-#include<iostream>
-using namespace std;
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
 int arr[]={6,9,7,4,1,0,11,15,16};
 int len=sizeof(arr)/sizeof(arr[0]);
 void Traverse();
@@ -8,6 +9,7 @@ void Delete();
 void Search();
 int main()
 {	
+	clrscr();
 	int choice,index,value;
 	while(1)
 	{
@@ -33,7 +35,9 @@ int main()
 					cout << "Invalid choice.";
 					break;
 		}
-	}	return 0;
+	}	
+	return 0;
+	getch();
 }
 void Traverse()
 {
