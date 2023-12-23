@@ -1,7 +1,8 @@
 #include<iostream>
-using namespace std;
+#include<conio.h>
 int main()
 {
+    clrscr();
     int arr[] = {1, 5, 7, 9, 15, 11, 19};
     int element;
     int n = sizeof(arr) / sizeof(arr[0]);
@@ -22,5 +23,6 @@ int main()
         cout << "Element not found" << endl;
     }
     return 0;
+    getch();
 }
 
