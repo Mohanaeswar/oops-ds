@@ -1,6 +1,6 @@
-#include<iostream>
-#include<cstring>
-using namespace std;
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
 class stud
 {
 	int rollno,m1,m2,m3,m4,m5,total;
@@ -57,10 +57,12 @@ void stud::display()
 }
 int main()
 {
+	clrscr();
 	stud s;
 	cout<<"\nStudent mark statement:";
 	s.getdata();
 	s.calculate();
 	s.display();
 	return 0;
+	getch();
 }
