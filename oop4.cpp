@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+#include<iostream.h>
+#include<conio.h>
 class over
 {
 	int side;
@@ -29,6 +29,7 @@ void over::area(float r)
 }
 int main()
 {
+	clrscr();
 	int side;
 	float l,b,r;
 	cout<<"\t\t\nFunction Overloading:";
@@ -37,4 +38,5 @@ int main()
 	o.area(l,b);
 	o.area(r);
 	return 0;
+	getch();
 }
