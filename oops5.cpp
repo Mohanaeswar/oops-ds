@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+#include<iostream.h>
+#include<conio.h>
 class sample
 {
 	int a;
@@ -25,6 +25,7 @@ void sample::put()
 }
 int main()
 {
+	clrscr();
 	cout<<"\n\tSWAPPING OF VALUES";
 	sample x,y;
 	x.get();
@@ -37,4 +38,5 @@ int main()
 	x.put();
 	y.put();
 	return 0;
+	getch();
 }
