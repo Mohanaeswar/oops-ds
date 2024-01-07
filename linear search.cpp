@@ -8,11 +8,11 @@ public:
 linear();
 void find();
 };
-void linear::linear()
+linear::linear()
 {
 cout<<"\nEnter the number of elements:"; 
 cin>>n;
-cout<<"\nEnter"<<n<<"Element:";
+cout<<"\nEnter "<<n<<" Element:";
 for(int i=0;i<n;i++)
 cin>>a[i];
 cout<<"Enter the element to be searched:";
@@ -30,7 +30,7 @@ flag++;
 }
 }
 if(flag>0)
-cout<<"\nElements"<<x<<"is at position:"<<pos;
+cout<<"\nElement "<<x<<" is at position:"<<pos;
 else
 cout<<"\nElement not found";
 }
