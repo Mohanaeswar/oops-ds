@@ -7,7 +7,9 @@ class queue
 	int front, rear;
 	public:
 		queue()
-		{front=rear=-1;}
+		{
+			front=rear=-1;
+		}
 		void insertion();
 		void deletion();
 		void display();
@@ -15,7 +17,7 @@ class queue
 void queue::insertion()
 {
 	int x;
-	if (rear = max-1)
+	if (rear == max-1)
 	cout<<"\nQueue is full";
 	else
 	{
