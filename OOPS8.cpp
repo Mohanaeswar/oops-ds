@@ -1,4 +1,5 @@
-#include<iostream>
+#include<iostream.h>
+#include<conio.h>
 using namespace std;
 class complex
 {
@@ -38,6 +39,7 @@ complex operator -(complex t1, complex t2)
 }
 int main()
 {
+	clrscr();
 	cout<<"\t\t Binary Operator Overloading";
 	complex c1,c2,c3;
 	c1.getdata();
@@ -49,4 +51,5 @@ int main()
 	cout<<"Subtraction of two complex numbers\n";
 	c3.putdata();
 	return 0;
+	getch();
 }
