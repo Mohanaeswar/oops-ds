@@ -25,21 +25,22 @@ void bubble::display()
 }
 void bubble::bsort()
 { 
-for(int i=0; i<n-1; i++)
-{
-	for(int j=0; i<n-1; j++)
-	{
-	if (a[j]>a[j+1])
-	{
-	t = a[j];
-	a[j]=a[j+1];
-	a[j+1] = t;	
-	}
-	}
-cout<<"\nPass"<<i+1<<":";
-display();
+    for(int i=0; i<n-1; i++)
+    {
+        for(int j=0; j<n-1; j++) // Corrected loop condition: j < n-1
+        {
+            if (a[j]>a[j+1])
+            {
+                t = a[j];
+                a[j]=a[j+1];
+                a[j+1] = t;	
+            }
+        }
+        cout<<"\nPass "<<i+1<<":";
+        display();
+    }
 }
-}
+
 int main()
 {
 	cout<<"Bubble sort";
